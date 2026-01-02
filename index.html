@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title data-i18n="meta.title">Asiltürk Furniture | İç Dekorasyon & Özel Üretim Mobilya</title>
+  <meta name="description" content="Asiltürk Furniture: İç dekorasyon, özel üretim mobilya ve anahtar teslim projeler. Minimalist modern tasarım, kaliteli işçilik, ölçüye özel üretim." data-i18n-content="meta.description" />
+  <meta name="theme-color" content="#ff0000" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content" data-i18n="a11y.skip">İçeriğe atla</a>
+
+  <!-- Header -->
+  <header class="header" id="top">
+    <div class="header-inner">
+      <a href="index.html" class="brand" aria-label="Asiltürk Furniture ana sayfa" data-i18n-aria="a11y.brandHome">
+        <img class="brand-logo" src="images/logo.png" alt="Asiltürk Furniture logo" />
+        <div class="brand-text">
+          <span class="brand-name">Asiltürk</span>
+          <span class="brand-sub" data-i18n="brand.sub">Furniture & Interior</span>
+        </div>
+      </a>
+
+      <nav class="navbar" aria-label="Ana menü" data-i18n-aria="a11y.mainNav">
+        <a href="index.html" data-i18n="nav.home">Anasayfa</a>
+        <a href="#about" data-i18n="nav.about">Hakkımızda</a>
+        <a href="koleksiyon.html" data-i18n="nav.collection">Koleksiyon</a>
+        <a href="projeler.html" data-i18n="nav.projects">Projeler</a>
+        <a href="#reviews" data-i18n="nav.reviews">Yorumlar</a>
+        <a href="#contact" data-i18n="nav.contact">İletişim</a>
+        <a href="blog.html" data-i18n="nav.blog">Blog</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Dil seçimi" data-i18n-aria="a11y.languageSwitch">
+          <button class="lang-btn" type="button" data-lang="tr" aria-label="Türkçe">TR</button>
+          <button class="lang-btn" type="button" data-lang="en" aria-label="English">EN</button>
+        </div>
+
+        <button class="icon-btn search-btn" aria-label="Arama" data-i18n-aria="a11y.search">
+          <i class="fas fa-search" aria-hidden="true"></i>
+        </button>
+
+        <a class="icon-btn" href="#contact" aria-label="Teklif Al" data-i18n-aria="a11y.getQuote">
+          <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+        </a>
+
+        <button class="icon-btn menu-btn" aria-label="Menüyü aç/kapat" data-i18n-aria="a11y.menuToggle">
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-panel" aria-hidden="true">
+      <div class="mobile-panel-head">
+        <span data-i18n="mobile.menuTitle">Menü</span>
+        <button class="icon-btn close-btn" aria-label="Menüyü kapat" data-i18n-aria="a11y.menuClose">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="mobile-panel-tools">
+        <div class="lang-switch" role="group" aria-label="Dil seçimi" data-i18n-aria="a11y.languageSwitch">
+          <button class="lang-btn" type="button" data-lang="tr" aria-label="Türkçe">TR</button>
+          <button class="lang-btn" type="button" data-lang="en" aria-label="English">EN</button>
+        </div>
+      </div>
+
+      <div class="mobile-links">
+        <a href="index.html" data-i18n="nav.home">Anasayfa</a>
+        <a href="#about" data-i18n="nav.about">Hakkımızda</a>
+        <a href="koleksiyon.html" data-i18n="nav.collection">Koleksiyon</a>
+        <a href="projeler.html" data-i18n="nav.projects">Projeler</a>
+        <a href="#reviews" data-i18n="nav.reviews">Yorumlar</a>
+        <a href="#contact" data-i18n="nav.contact">İletişim</a>
+        <a href="blog.html" data-i18n="nav.blog">Blog</a>
+      </div>
+      <div class="mobile-cta">
+        <a class="btn btn-primary" href="#contact" data-i18n="mobile.ctaPrimary">Ücretsiz Keşif / Teklif</a>
+        <a class="btn btn-ghost" href="projeler.html" data-i18n="mobile.ctaSecondary">Projeleri Gör</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Search overlay -->
+  <div class="overlay" id="searchOverlay" aria-hidden="true">
+    <div class="overlay-card" role="dialog" aria-modal="true" aria-label="Arama" data-i18n-aria="a11y.searchDialog">
+      <div class="overlay-head">
+        <h3 data-i18n="search.title">Arama</h3>
+        <button class="icon-btn overlay-close" aria-label="Kapat" data-i18n-aria="a11y.close">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="overlay-body">
+        <label class="field">
+          <span data-i18n="search.question">Ne arıyorsun?</span>
+          <input type="search" placeholder="Örn: L koltuk, TV ünitesi, mutfak..." data-i18n-placeholder="search.placeholder" />
+        </label>
+        <p class="hint" data-i18n="search.hint">Bu alan şimdilik görsel amaçlı. İstersen arama sonuçlarını JS ile bağlarız.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <main id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="eyebrow" data-i18n="hero.eyebrow">Minimalist • Modern • Ölçüye Özel</p>
+      <h1 data-i18n-html="hero.title">İç dekorasyon ve mobilyada <span>kişiye özel</span> tasarım.</h1>
+      <p class="lead" data-i18n="hero.lead">
+        8 yıllık uluslararası deneyimle; ev ve iş yerleri için ölçüye özel mobilyalar,
+        anahtar teslim iç dekorasyon çözümleri ve kaliteli işçilik.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary" data-i18n="hero.primary">Ücretsiz Keşif / Teklif Al</a>
+        <a href="koleksiyon.html" class="btn btn-ghost" data-i18n="hero.secondary">Koleksiyonu İncele</a>
+      </div>
+
+      <div class="hero-badges" role="list" aria-label="Öne çıkan özellikler" data-i18n-aria="a11y.highlights">
+        <div class="badge" role="listitem">
+          <i class="fa-solid fa-ruler-combined" aria-hidden="true"></i>
+          <div>
+            <strong data-i18n="hero.badges.0.title">Ölçüye Özel</strong>
+            <span data-i18n="hero.badges.0.sub">Alanına tam uyum</span>
+          </div>
+        </div>
+        <div class="badge" role="listitem">
+          <i class="fa-solid fa-couch" aria-hidden="true"></i>
+          <div>
+            <strong data-i18n="hero.badges.1.title">Özel Üretim</strong>
+            <span data-i18n="hero.badges.1.sub">Malzeme & renk seçimi</span>
+          </div>
+        </div>
+        <div class="badge" role="listitem">
+          <i class="fa-solid fa-truck-fast" aria-hidden="true"></i>
+          <div>
+            <strong data-i18n="hero.badges.2.title">Teslim & Kurulum</strong>
+            <span data-i18n="hero.badges.2.sub">Planlı süreç yönetimi</span>
+          </div>
+        </div>
+        <div class="badge" role="listitem">
+          <i class="fa-solid fa-shield-heart" aria-hidden="true"></i>
+          <div>
+            <strong data-i18n="hero.badges.3.title">Garanti</strong>
+            <span data-i18n="hero.badges.3.sub">Satış sonrası destek</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a class="scroll-down" href="#about" aria-label="Aşağı kaydır" data-i18n-aria="a11y.scrollDown">
+      <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+    </a>
+  </main>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container grid-2">
+      <div class="media-card">
+        <img src="images/dream-like-minimalist-living-room.jpeg" alt="Minimalist bir salon dekorasyonu" data-i18n-alt="about.imageAlt" loading="lazy">
+      </div>
+
+      <div>
+        <h2 class="section-title" data-i18n="about.title">Hakkımızda</h2>
+        <p class="section-text" data-i18n-html="about.text">
+          Asiltürk Furniture; modern yaşam alanları için <strong>minimalist ve fonksiyonel</strong> çözümler tasarlar.
+          Tasarım, üretim ve uygulama süreçlerini tek çatı altında yönetir.
+        </p>
+
+        <ul class="checklist" aria-label="Hizmet yaklaşımı" data-i18n-aria="a11y.approach">
+          <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> <span data-i18n="about.list.0">Keşif & ölçülendirme</span></li>
+          <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> <span data-i18n="about.list.1">2D/3D tasarım & onay</span></li>
+          <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> <span data-i18n="about.list.2">Üretim & kalite kontrol</span></li>
+          <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> <span data-i18n="about.list.3">Teslimat & montaj</span></li>
+        </ul>
+
+        <div class="about-actions">
+          <a class="btn btn-primary" href="projeler.html" data-i18n="about.primary">Projeleri Gör</a>
+          <a class="btn btn-ghost" href="#contact" data-i18n="about.secondary">İletişime Geç</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Reviews -->
+  <section id="reviews" class="section section-muted">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title" data-i18n="reviews.title">Yorumlar</h2>
+        <p class="section-text" data-i18n="reviews.text">Örnek yorum metinleri. Gerçek yorumları ekleyince otomatik uyum sağlar.</p>
+      </div>
+
+      <div class="reviews">
+        <article class="review">
+          <div class="stars" aria-label="5 yıldız" data-i18n-aria="a11y.fiveStars">
+            <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i>
+          </div>
+          <p data-i18n="reviews.items.0.quote">“Ölçüye özel üretim tam istediğim gibi oldu. Kurulum tertemiz ve hızlıydı.”</p>
+          <div class="reviewer">
+            <div class="avatar">A</div>
+            <div>
+              <strong>Ayşe K.</strong>
+              <span>Abuja</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="review">
+          <div class="stars" aria-label="5 yıldız" data-i18n-aria="a11y.fiveStars">
+            <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i>
+          </div>
+          <p data-i18n="reviews.items.1.quote">“Tasarım sürecinde her detay konuşuldu. Kumaş kalitesi ve oturum çok iyi.”</p>
+          <div class="reviewer">
+            <div class="avatar">M</div>
+            <div>
+              <strong>Mehmet S.</strong>
+              <span>Malatya</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="review">
+          <div class="stars" aria-label="5 yıldız" data-i18n-aria="a11y.fiveStars">
+            <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i>
+          </div>
+          <p data-i18n="reviews.items.2.quote">“Evin tamamı için dekorasyon paketi aldık. Sonuç çok ferah ve modern.”</p>
+          <div class="reviewer">
+            <div class="avatar">E</div>
+            <div>
+              <strong>Elif T.</strong>
+              <span>Diyarbakır</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title" data-i18n="contact.title">İletişim</h2>
+        <p class="section-text" data-i18n="contact.text">Aşağıdaki formdan ölçü / ürün türü / şehir bilgisi bırakınca hızlı dönüş yapılır.</p>
+      </div>
+
+      <div class="contact-grid">
+        <form class="contact-card" action="#" method="post">
+          <div class="grid-2-sm">
+            <label class="field">
+              <span data-i18n="contact.form.name">Ad Soyad</span>
+              <input name="name" type="text" placeholder="Adınız" data-i18n-placeholder="contact.form.namePh" required />
+            </label>
+            <label class="field">
+              <span data-i18n="contact.form.phone">Telefon</span>
+              <input name="phone" type="tel" placeholder="+234 xxx xxx xxxx" data-i18n-placeholder="contact.form.phonePh" />
+            </label>
+          </div>
+
+          <div class="grid-2-sm">
+            <label class="field">
+              <span data-i18n="contact.form.service">Hizmet</span>
+              <select name="service" aria-label="Hizmet" data-i18n-aria="contact.form.service">
+                <option value="olcuye-ozel" data-i18n="contact.form.options.0">Ölçüye özel mobilya</option>
+                <option value="dekorasyon" data-i18n="contact.form.options.1">İç dekorasyon</option>
+                <option value="anahtar-teslim" data-i18n="contact.form.options.2">Anahtar teslim proje</option>
+                <option value="diger" data-i18n="contact.form.options.3">Diğer</option>
+              </select>
+            </label>
+          </div>
+
+          <label class="field">
+            <span data-i18n="contact.form.message">Mesaj</span>
+            <textarea name="message" rows="5" placeholder="İstediğiniz ürün, ölçüler, şehir ve varsa referans görsel bilgisi..." data-i18n-placeholder="contact.form.messagePh"></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit" data-i18n="contact.form.submit">Gönder</button>
+          </div>
+
+          <p class="hint" data-i18n="contact.form.hint">Not: Form backend’e bağlanmadı. İstersen mail gönderimi / WhatsApp yönlendirmesi eklenir.</p>
+        </form>
+
+        <aside class="contact-info">
+          <div class="info-card">
+            <h3 data-i18n="contact.info.title">Hızlı İletişim</h3>
+            <ul class="info-list">
+              <li><i class="fa-solid fa-phone" aria-hidden="true"></i> <span data-i18n="contact.info.phone">Telefon</span>: <a href="tel:+2349091111507">+234 909 111 1507</a></li>
+              <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> <span data-i18n="contact.info.address">53 Kumasi Crescent, Wuse 2, FCT Abuja, Nigeria</span></li>
+              <li><i class="fa-solid fa-industry" aria-hidden="true"></i> <span data-i18n="contact.info.factory">Fabrika</span>: <span data-i18n="contact.info.factoryAddress">Mogadishu Cantonment, New Mumy Market Extension, Abuja</span></li>
+              <li><i class="fa-solid fa-globe" aria-hidden="true"></i> <span data-i18n="contact.info.website">Website</span>: <a href="https://www.asilturkfurniture.com" target="_blank" rel="noopener">www.asilturkfurniture.com</a></li>
+              <li><i class="fa-solid fa-clock" aria-hidden="true"></i> <span data-i18n="contact.info.hours">Pzt-Cts: 09:00 - 19:00</span></li>
+            </ul>
+
+            <div class="social">
+              <a class="icon-btn" href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+              <a class="icon-btn" href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest" aria-hidden="true"></i></a>
+              <a class="icon-btn" href="#" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+              <a class="icon-btn" href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+            </div>
+          </div>
+
+          <div class="map-card">
+            <iframe
+              title="Harita"
+              data-i18n-title="contact.mapTitle"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=53+Kumasi+Crescent,+Wuse+2,+FCT+Abuja,+Nigeria&output=embed">
+            </iframe>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Asiltürk logo" />
+        <p data-i18n="footer.brandText">Özel üretim mobilya ve iç dekorasyon çözümleri.</p>
+      </div>
+
+      <div>
+        <h4 data-i18n="footer.contactTitle">İletişim</h4>
+        <ul class="footer-links">
+          <li><a href="tel:+2349091111507">+234 909 111 1507</a></li>
+          <li data-i18n="footer.location">53 Kumasi Crescent, Wuse 2, FCT Abuja, Nigeria</li>
+          <li><a href="https://www.asilturkfurniture.com" target="_blank" rel="noopener">www.asilturkfurniture.com</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 data-i18n="footer.newsletterTitle">Bülten</h4>
+        <p class="muted" data-i18n="footer.newsletterText">Yeni projeler ve kampanyalar için.</p>
+        <form class="newsletter" action="#" method="post">
+          <input type="email" placeholder="E-posta adresi" data-i18n-placeholder="footer.newsletterPlaceholder" aria-label="E-posta adresi" data-i18n-aria="footer.newsletterPlaceholder">
+          <button class="btn btn-small btn-primary" type="submit" data-i18n="footer.newsletterBtn">Kaydol</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <small>© <span id="year"></span> Asiltürk Furniture. <span data-i18n="footer.rights">Tüm hakları saklıdır.</span></small>
+        <a class="back-to-top" href="#top" aria-label="Yukarı" data-i18n-aria="footer.backToTop">
+          <span data-i18n="footer.backToTop">Yukarı</span> <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a class="whatsapp-fab" href="https://wa.me/2349091111507" target="_blank" rel="noopener" aria-label="WhatsApp ile yaz" data-i18n-aria="a11y.whatsapp">
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+  </a>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
