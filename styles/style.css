@@ -292,7 +292,7 @@ button, input, select, textarea{
   min-height: calc(100vh - 10rem);
   display: grid;
   align-items: center;
-  margin-top: -2.2rem; /* bring hero closer to header */
+  margin-top: 0; /* bring hero closer to header */
   padding: 7.5rem 0 5.5rem;
   background: url("../images/home.jpeg") center/cover no-repeat;
 }
