@@ -289,13 +289,18 @@ button, input, select, textarea{
 /* Hero */
 .hero{
   position: relative;
-  min-height: calc(100vh - 10rem);
+  min-height: 100vh;                 /* calc(100vh - 10rem) yerine */
   display: grid;
   align-items: center;
-  margin-top: 0; /* bring hero closer to header */
+  margin-top: 0;                     /* negatif değeri kaldır */
   padding: 7.5rem 0 5.5rem;
-  background: url("../images/home.jpeg") center/cover no-repeat;
+
+  background-image: url("../images/home.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom; /* altı sabitle */
 }
+
 .hero-overlay{
   position: absolute;
   inset: 0;
