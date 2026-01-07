@@ -198,9 +198,10 @@
     "hero.badges.3.title": "Warranty",
     "hero.badges.3.sub": "After-sales support",
 
-    "about.title": "About Us",
+    "about.title": "About The Company",
     "about.imageAlt": "A minimalist living room interior",
-    "about.text": "Asiltürk Furniture designs <strong>minimal and functional</strong> solutions for modern living spaces. We manage design, production and installation under one roof.",
+    "about.text": "Asilturk Furniture Co. is an international commercial interior and furniture contractor based in Abuja. It is a Turkish business established in 2017. Asilturk provides turnkey interior solutions—from interior design to installation. The company has delivered commercial projects such as office blocks, hotels, universities, healthcare organizations, and private houses across many states.",
+
     "about.list.0": "On-site visit & measurement",
     "about.list.1": "2D/3D design & approval",
     "about.list.2": "Production & quality control",
