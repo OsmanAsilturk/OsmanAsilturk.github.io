@@ -289,18 +289,13 @@ button, input, select, textarea{
 /* Hero */
 .hero{
   position: relative;
-  min-height: 100vh;                 /* calc(100vh - 10rem) yerine */
+  min-height: calc(100vh - 10rem);
   display: grid;
   align-items: center;
-  margin-top: 0;                     /* negatif değeri kaldır */
+  margin-top: 0;
   padding: 7.5rem 0 5.5rem;
-
-  background-image: url("../images/home.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center bottom; /* altı sabitle */
+  background: url("../images/home.jpeg") center bottom/cover no-repeat;
 }
-
 .hero-overlay{
   position: absolute;
   inset: 0;
@@ -854,12 +849,6 @@ main#main-content .section-title {
   gap: 1rem;
   flex-wrap: wrap;
 }
-.back-to-top{
-  color: rgba(255,255,255,0.88);
-  text-decoration: underline;
-  text-decoration-color: rgba(255,255,255,0.22);
-}
-.back-to-top i{ color: var(--primary); margin-left: .6rem; }
 
 /* WhatsApp floating button */
 .whatsapp-fab{
