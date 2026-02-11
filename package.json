@@ -1,0 +1,13 @@
+{
+  "name": "asilturk-furniture-site-bilingual",
+  "version": "1.0.0",
+  "description": "Static site image pipeline for Asilturk Furniture projects",
+  "type": "module",
+  "scripts": {
+    "convert:images": "node scripts/convert_all.mjs"
+  },
+  "dependencies": {
+    "sharp": "^0.33.3"
+  }
+}
+
