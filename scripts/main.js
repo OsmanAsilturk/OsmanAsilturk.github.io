@@ -102,6 +102,15 @@
       // ignore
     }
     applyTranslations(safeLang);
+    try {
+      window.dispatchEvent(
+        new CustomEvent("site:lang-changed", {
+          detail: { lang: safeLang }
+        })
+      );
+    } catch {
+      // ignore
+    }
   };
 
   const getInitialLang = () => {
