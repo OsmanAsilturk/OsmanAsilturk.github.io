@@ -1,5 +1,18 @@
 const MAX_TRY = 60;
 const MAX_CONSECUTIVE_MISSES = 6;
+const STORAGE_KEY = "asilturk_lang";
+
+function getLang() {
+  try {
+    const stored = (localStorage.getItem(STORAGE_KEY) || "").toLowerCase();
+    if (stored === "tr" || stored === "en") return stored;
+  } catch {
+    // ignore
+  }
+  const htmlLang = (document.documentElement.getAttribute("lang") || "").toLowerCase();
+  if (htmlLang === "tr" || htmlLang === "en") return htmlLang;
+  return "tr";
+}
 
 function getProjectBySlug(slug) {
   if (!Array.isArray(window.PROJECTS)) return null;
@@ -44,7 +57,7 @@ async function buildGallery(project) {
     const img = document.createElement("img");
     img.className = "gallery-img";
     img.src = src;
-    img.alt = `${project.title} fotoğraf ${num}`;
+    img.alt = `${project.title?.tr || project.slug} fotoğraf ${num}`;
     img.loading = "lazy";
 
     const wrapper = document.createElement("button");
@@ -74,26 +87,27 @@ async function buildGallery(project) {
   }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const params = new URLSearchParams(window.location.search);
-  const slug = params.get("p");
-
-  const project = getProjectBySlug(slug) || (Array.isArray(window.PROJECTS) ? window.PROJECTS[0] : null);
-  if (!project) return;
+function renderDetail(project, lang) {
+  const safeLang = lang === "en" ? "en" : "tr";
 
   const titleEl = document.getElementById("pTitle");
   const metaEl = document.getElementById("pMeta");
   const descEl = document.getElementById("pDesc");
   const tagsEl = document.getElementById("pTags");
 
-  if (titleEl) titleEl.textContent = project.title;
-  if (metaEl) metaEl.textContent = `${project.location} • ${project.year}`;
-  if (descEl) descEl.textContent = project.description;
+  const titleText = project.title?.[safeLang] || project.title?.tr || project.slug;
+  const locationText = project.location?.[safeLang] || project.location?.tr || "";
+  const descText = project.description?.[safeLang] || project.description?.tr || "";
+  const tags = project.tags?.[safeLang] || project.tags?.tr || [];
+
+  if (titleEl) titleEl.textContent = titleText;
+  if (metaEl) metaEl.textContent = `${locationText} • ${project.year}`;
+  if (descEl) descEl.textContent = descText;
 
   if (tagsEl) {
     tagsEl.innerHTML = "";
-    if (Array.isArray(project.tags)) {
-      project.tags.forEach((tag) => {
+    if (Array.isArray(tags)) {
+      tags.forEach((tag) => {
         const span = document.createElement("span");
         span.className = "tag-pill";
         span.textContent = tag;
@@ -101,7 +115,17 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   }
+}
 
+document.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  const slug = params.get("p");
+
+  const project = getProjectBySlug(slug) || (Array.isArray(window.PROJECTS) ? window.PROJECTS[0] : null);
+  if (!project) return;
+
+  const initialLang = getLang();
+  renderDetail(project, initialLang);
   buildGallery(project);
 
   // Modal interactions
@@ -125,6 +149,19 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       closeImageModal();
+    }
+  });
+
+  window.addEventListener("site:lang-changed", (e) => {
+    const lang = e?.detail?.lang || getLang();
+    renderDetail(project, lang);
+  });
+
+  document.addEventListener("click", (e) => {
+    if (e.target.closest(".lang-btn")) {
+      setTimeout(() => {
+        renderDetail(project, getLang());
+      }, 0);
     }
   });
 });
