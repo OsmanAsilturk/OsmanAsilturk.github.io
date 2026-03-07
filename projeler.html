@@ -122,39 +122,7 @@
         <p class="section-text" data-i18n="projects.text">Seçili işler. Proje görselleri çoğaldıkça bu alan otomatik genişler.</p>
       </div>
 
-      <div class="gallery">
-        <a class="gallery-item" href="#" aria-label="Proje 1">
-          <img src="images/home.jpeg" alt="Proje görseli 1" loading="lazy">
-          <div class="gallery-overlay">
-            <span data-i18n="projects.items.0.title">Modern Salon</span>
-            <small data-i18n="projects.items.0.sub">Ölçüye özel oturma grubu</small>
-          </div>
-        </a>
-
-        <a class="gallery-item" href="#" aria-label="Proje 2">
-          <img src="images/adsiz-tasarim.jpg" alt="Proje görseli 2" loading="lazy">
-          <div class="gallery-overlay">
-            <span data-i18n="projects.items.1.title">Minimal Oturum</span>
-            <small data-i18n="projects.items.1.sub">Konsept & uygulama</small>
-          </div>
-        </a>
-
-        <a class="gallery-item" href="#" aria-label="Proje 3">
-          <img src="images/dream-like-minimalist-living-room.jpeg" alt="Proje görseli 3" loading="lazy">
-          <div class="gallery-overlay">
-            <span data-i18n="projects.items.2.title">Aydınlık Yaşam</span>
-            <small data-i18n="projects.items.2.sub">Dekorasyon paketi</small>
-          </div>
-        </a>
-
-        <a class="gallery-item" href="#" aria-label="Proje 4">
-          <img src="images/menu-1.png" alt="Proje görseli 4" loading="lazy">
-          <div class="gallery-overlay">
-            <span data-i18n="projects.items.3.title">Köşe Takımı</span>
-            <small data-i18n="projects.items.3.sub">Modüler L koltuk</small>
-          </div>
-        </a>
-      </div>
+      <div class="gallery" id="projectsGrid"></div>
 
       <div class="cta-strip">
         <div>
@@ -196,9 +164,6 @@
     <div class="footer-bottom">
       <div class="container footer-bottom-inner">
         <small>© <span id="year"></span> Asiltürk Furniture. <span data-i18n="footer.rights">Tüm hakları saklıdır.</span></small>
-        <a class="back-to-top" href="#top" aria-label="Yukarı" data-i18n-aria="footer.backToTop">
-          <span data-i18n="footer.backToTop">Yukarı</span> <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
-        </a>
       </div>
     </div>
   </footer>
@@ -208,6 +173,8 @@
     <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
   </a>
 
+  <script src="scripts/projects-data.js"></script>
+  <script src="scripts/projects-list.js"></script>
   <script src="scripts/main.js"></script>
 </body>
 </html>
