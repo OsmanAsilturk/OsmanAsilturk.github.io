@@ -7,8 +7,11 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const projectRoot = path.join(__dirname, "..");
 
+// Ham görseller üst klasördeki raw_rars altında:
+// c:\Users\feyza\OneDrive\Music\Desktop\raw_rars
 const RAW_ROOT = path.join(projectRoot, "..", "raw_rars");
 const OUT_ROOT = path.join(projectRoot, "images", "projects");
+
 const PROJECTS = {
   moritanya: { coverIndex: 11 },
   "istanbul-hastane": { coverIndex: 4 },
