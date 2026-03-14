@@ -152,7 +152,7 @@ window.PROJECTS = [
       tr: "Arnavutluk’ta konut projesi için hazırlanan örnek daire konsept çalışmaları ve uygulaması.",
       en: "Concept design and implementation of a sample flat for a residential project in Albania."
     },
-    cover: "images/projects/arnavutluk-mock-up/1.png",
+    cover: "images/projects/arnavutluk-mock-up/cover.webp",
     coverIndex: 7
   },
   {
